@@ -18,4 +18,3 @@
     entry: puppet-lint
     language: ruby
     files: \.pp$
-    args: [--fail-on-warnings]
