@@ -1,0 +1,5 @@
+# we can't deal with ruby, so we exec a shell script instead
+script = File.expand_path('../../bin/erb-validate', File.absolute_path(__FILE__))
+exec([script, script], *ARGV)
+
+# vim: ft=ruby

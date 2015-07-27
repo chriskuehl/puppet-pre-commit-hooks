@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+set -eu
+
+status=0
+for path in "$@"; do
+	output=$(erb -x -P -T - -- "$path" | ruby -c 2>&1) || {
+		echo -e "\033[31m\033[1m$path: failed erb validation\033[0m"
+		echo "$output"
+		status=1
+	}
+done
+
+exit "$status"
