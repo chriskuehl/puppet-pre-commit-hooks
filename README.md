@@ -41,6 +41,14 @@ Provides the following hooks:
 3. Run `pre-commit install` to add pre-commit git hooks. You can also run
    `pre-commit run --all-files`, which is useful as part of your tests.
 
-Note that currently it's only possible to use the Puppet 3 parser for
-validation. The Puppet 4 parser has many changes, and it's planned to have a
-separate branch for Puppet 4 hooks in the future.
+To use the future parser with validation, just pass it as an argument
+to the `puppet-validate` hook:
+
+    -   id: puppet-validate
+        args: [--parser=future]
+
+This option will only work for Puppet 3. For Puppet 4, just use a
+updated version of `puppet` to run these hooks and remove the argument.
+
+Any other arguments to `puppet-validate` will be fed directly to
+`puppet parser validate`, as long as they are in the format `--arg=value`.
