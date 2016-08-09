@@ -47,8 +47,5 @@ to the `puppet-validate` hook:
     -   id: puppet-validate
         args: [--parser=future]
 
-This option will only work for Puppet 3. For Puppet 4, just use a
-updated version of `puppet` to run these hooks and remove the argument.
-
 Any other arguments to `puppet-validate` will be fed directly to
 `puppet parser validate`, as long as they are in the format `--arg=value`.
