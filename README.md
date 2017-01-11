@@ -25,6 +25,7 @@ Provides the following hooks:
             hooks:
             -   id: puppet-validate
             -   id: erb-validate
+            -   id: epp-validate
             -   id: puppet-lint
                 args:
                 -   --fail-on-warnings
