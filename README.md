@@ -13,6 +13,11 @@ Provides the following hooks:
 
 * **erb-validate:** compiles and syntax-checks Ruby erb templates.
 
+* **epp-validate:** validates and syntax-checks [Puppet's epp templates][epp].
+
+
+[epp]: https://docs.puppet.com/puppet/latest/lang_template_epp.html
+
 ## Usage
 
 1. Install [pre-commit](http://pre-commit.com/), if you haven't already.
