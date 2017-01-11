@@ -2,26 +2,26 @@
     name: Validate Puppet manifests
     description: Validate syntax of Puppet manifests
     entry: puppet-validate
-    language: ruby
+    language: script
     files: \.pp$
 
 -   id: erb-validate
     name: Validate ERB templates
     description: Validate syntax of Ruby ERB templates
     entry: erb-validate
-    language: ruby
+    language: script
     files: \.erb$
 
 -   id: epp-validate
     name: Validate EPP templates
     description: Validate syntax of Puppet EPP templates
     entry: epp-validate
-    language: ruby
+    language: script
     files: \.epp$
 
 -   id: puppet-lint
     name: puppet-lint
     description: Check Puppet manifests for stylistic problems
     entry: puppet-lint
-    language: ruby
+    language: script
     files: \.pp$
