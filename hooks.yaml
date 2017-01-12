@@ -4,6 +4,7 @@
     entry: puppet-validate
     language: ruby
     files: \.pp$
+    additional_dependencies: ['puppet']
 
 -   id: erb-validate
     name: Validate ERB templates
@@ -18,6 +19,7 @@
     entry: epp-validate
     language: ruby
     files: \.epp$
+    additional_dependencies: ['puppet']
 
 -   id: puppet-lint
     name: puppet-lint
@@ -25,3 +27,4 @@
     entry: puppet-lint
     language: ruby
     files: \.pp$
+    additional_dependencies: ['puppet-lint']
