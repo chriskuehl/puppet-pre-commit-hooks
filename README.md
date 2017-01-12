@@ -60,3 +60,16 @@ to the `puppet-validate` hook:
 
 Any other arguments to `puppet-validate` will be fed directly to
 `puppet parser validate`, as long as they are in the format `--arg=value`.
+
+By default, the latest versions of `puppet` and `puppet-lint` are used. If
+you'd like to use a different version, you can pass `additional_dependencies`
+when definining the hooks, e.g.:
+
+```yaml
+hooks:
+-   id: puppet-validate
+    additional_dependencies: ['puppet:3.8.7']
+```
+
+To see what dependencies you might want to change, take a look at
+`hooks.yaml` in this repo.
