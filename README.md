@@ -50,14 +50,6 @@ Provides the following hooks:
 
 4. Test the hooks work properly with `pre-commit run --all-files`.
 
-To use the future parser with validation, just pass it as an argument
-to the `puppet-validate` hook:
-
-```yaml
-    -   id: puppet-validate
-        args: --parser=future
-```
-
 Any other arguments to `puppet-validate` will be fed directly to
 `puppet parser validate`, as long as they are in the format `--arg=value`.
 
