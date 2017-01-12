@@ -27,7 +27,7 @@ Provides the following hooks:
 
     ```yaml
     -   repo: https://github.com/chriskuehl/puppet-pre-commit-hooks.git
-        sha: v1.0
+        sha: v2.0
         hooks:
         -   id: puppet-validate
         -   id: erb-validate
@@ -63,12 +63,14 @@ Any other arguments to `puppet-validate` will be fed directly to
 
 By default, the latest versions of `puppet` and `puppet-lint` are used. If
 you'd like to use a different version, you can pass `additional_dependencies`
-when definining the hooks, e.g.:
+when definining the hooks.
+
+For example, if you're still using Puppet 3, you can use:
 
 ```yaml
 hooks:
 -   id: puppet-validate
-    additional_dependencies: ['puppet:3.8.7']
+    additional_dependencies: ['puppet:<4']
 ```
 
 To see what dependencies you might want to change, take a look at
