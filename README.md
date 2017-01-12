@@ -26,7 +26,7 @@ Provides the following hooks:
    root of your git repository:
 
         -   repo: https://github.com/chriskuehl/puppet-pre-commit-hooks.git
-            sha: <insert current sha>
+            sha: v1.0
             hooks:
             -   id: puppet-validate
             -   id: erb-validate
