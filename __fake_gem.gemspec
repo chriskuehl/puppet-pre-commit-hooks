@@ -7,5 +7,4 @@ Gem::Specification.new do |s|
 
     s.bindir = 'ruby-stubs'
     s.executables = ['puppet-validate', 'erb-validate', 'epp-validate']
-    s.files = Dir['bin/*']
 end

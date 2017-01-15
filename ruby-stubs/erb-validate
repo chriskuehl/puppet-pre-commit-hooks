@@ -1,5 +1,14 @@
-# we can't deal with ruby, so we exec a shell script instead
-script = File.expand_path('../../bin/erb-validate', File.absolute_path(__FILE__))
-exec([script, script], *ARGV)
+require 'English'
+
+status = 0
+ARGV.each do |file|
+  output = `erb -x -P -T - -- "#{file}" | ruby -c 2>&1`
+  next if $CHILD_STATUS.exitstatus == 0
+  puts "#{file}: failed erb validation"
+  puts output
+  status = 1
+end
+
+exit status
 
 # vim: ft=ruby
