@@ -1,5 +1,19 @@
-# we can't deal with ruby, so we exec a shell script instead
-script = File.expand_path('../../bin/puppet-validate', File.absolute_path(__FILE__))
-exec([script, script], *ARGV)
+require 'English'
+
+status = 0
+options = []
+ARGV.each do |arg|
+  if arg =~ /^--.+=.+$/
+    options.append arg
+    next
+  end
+  output = `puppet parser validate #{options.join(' ')} -- "#{arg}" 2>&1`
+  next if $CHILD_STATUS.exitstatus == 0
+  puts "#{arg}: failed Puppet validation"
+  puts output
+  status = 1
+end
+
+exit status
 
 # vim: ft=ruby
