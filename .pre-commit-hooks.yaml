@@ -1,0 +1,30 @@
+-   id: puppet-validate
+    name: Validate Puppet manifests
+    description: Validate syntax of Puppet manifests
+    entry: puppet-validate
+    language: ruby
+    files: \.pp$
+    additional_dependencies: ['puppet']
+
+-   id: erb-validate
+    name: Validate ERB templates
+    description: Validate syntax of Ruby ERB templates
+    entry: erb-validate
+    language: ruby
+    files: \.erb$
+
+-   id: epp-validate
+    name: Validate EPP templates
+    description: Validate syntax of Puppet EPP templates
+    entry: epp-validate
+    language: ruby
+    files: \.epp$
+    additional_dependencies: ['puppet']
+
+-   id: puppet-lint
+    name: puppet-lint
+    description: Check Puppet manifests for stylistic problems
+    entry: puppet-lint
+    language: ruby
+    files: \.pp$
+    additional_dependencies: ['puppet-lint']
