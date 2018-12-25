@@ -1,5 +1,5 @@
 Gem::Specification.new do |s|
-    s.name = '__fake_gem'
+    s.name = 'pre_commit_fake_gem'
     s.version = '0'
     s.authors = 'Chris Kuehl'
     s.summary = 'pre-commit hooks for Puppet projects'
