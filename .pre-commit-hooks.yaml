@@ -1,30 +1,45 @@
--   id: puppet-validate
-    name: Validate Puppet manifests
-    description: Validate syntax of Puppet manifests
-    entry: puppet-validate
-    language: ruby
-    files: \.pp$
-    additional_dependencies: ['puppet']
+- id: epp-validate
+  additional_dependencies: ['puppet']
+  description: Validate syntax of Puppet EPP templates
+  entry: epp-validate
+  files: \.epp$
+  language: ruby
+  name: Validate EPP templates
 
--   id: erb-validate
-    name: Validate ERB templates
-    description: Validate syntax of Ruby ERB templates
-    entry: erb-validate
-    language: ruby
-    files: \.erb$
+- id: erb-validate
+  description: Validate syntax of Ruby ERB templates
+  entry: erb-validate
+  files: \.erb$
+  language: ruby
+  name: Validate ERB templates
 
--   id: epp-validate
-    name: Validate EPP templates
-    description: Validate syntax of Puppet EPP templates
-    entry: epp-validate
-    language: ruby
-    files: \.epp$
-    additional_dependencies: ['puppet']
+- id: g10k-validate
+  description: Validate syntax of Puppetfile using g10k
+  entry: g10k-validate
+  files: ^Puppetfile$
+  language: ruby
+  name: Validate g10k Puppetfile
 
--   id: puppet-lint
-    name: puppet-lint
-    description: Check Puppet manifests for stylistic problems
-    entry: puppet-lint
-    language: ruby
-    files: \.pp$
-    additional_dependencies: ['puppet-lint']
+- id: puppet-lint
+  additional_dependencies: ['puppet-lint']
+  description: Check Puppet manifests for stylistic problems
+  entry: puppet-lint
+  files: \.pp$
+  language: ruby
+  name: puppet-lint
+
+- id: puppet-validate
+  additional_dependencies: ['puppet']
+  description: Validate syntax of Puppet manifests
+  entry: puppet-validate
+  files: \.pp$
+  language: ruby
+  name: Validate Puppet manifests
+
+- id: r10k-validate
+  additional_dependencies: ['r10k']
+  description: Validate syntax of Puppetfile using r10k
+  entry: r10k-validate
+  files: ^Puppetfile$
+  language: ruby
+  name: Validate r10k Puppetfile
