@@ -43,3 +43,11 @@
   files: ^Puppetfile$
   language: ruby
   name: Validate r10k Puppetfile
+
+- id: ruby-validate
+  additional_dependencies: ['ruby']
+  description: Validate syntax of ruby code
+  entry: ruby-validate
+  files: \.rb$
+  language: ruby
+  name: Validate ruby syntax
