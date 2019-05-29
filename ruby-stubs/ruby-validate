@@ -1,0 +1,14 @@
+require 'English'
+
+status = 0
+ARGV.each do |file|
+  output = `ruby -wc "#{file}" 2>&1`
+  next if $CHILD_STATUS.exitstatus == 0
+  puts "#{file}: failed ruby syntax check"
+  puts output
+  status = 1
+end
+
+exit status
+
+# vim: ft=ruby

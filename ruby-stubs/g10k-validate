@@ -1,0 +1,14 @@
+require 'English'
+
+status = 0
+ARGV.each do |file|
+  output = `g10k -dryrun -puppetfile -puppetfilelocation "#{file}" check 2>&1`
+  next unless output =~ /^Error:/
+  puts "#{file}: failed g10k validation"
+  puts output
+  status = 1
+end
+
+exit status
+
+# vim: ft=ruby

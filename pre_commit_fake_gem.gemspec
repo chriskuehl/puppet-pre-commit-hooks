@@ -6,5 +6,5 @@ Gem::Specification.new do |s|
     s.description = 'pre-commit hooks for Puppet projects'
 
     s.bindir = 'ruby-stubs'
-    s.executables = ['puppet-validate', 'erb-validate', 'epp-validate']
+    s.executables = ['erb-validate', 'epp-validate', 'g10k-validate', 'puppet-validate', 'r10k-validate', 'ruby-validate']
 end
