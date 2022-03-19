@@ -5,6 +5,9 @@ Puppet pre-commit hooks
 
 Provides the following hooks:
 
+* **bolt-validate:** uses [`puppet parser validate --tasks`][puppet-parser] to check the syntax of
+  Puppet bolt plans.
+
 * **epp-validate:** validates and syntax-checks [Puppet's epp templates][epp].
 
 * **erb-validate:** compiles and syntax-checks [Ruby erb templates][erb].
@@ -41,8 +44,9 @@ Provides the following hooks:
 
     ```yaml
     - repo: https://github.com/chriskuehl/puppet-pre-commit-hooks.git
-      sha: v2.1.0
+      rev: v2.1.0
       hooks:
+        - id: bolt-validate
         - id: epp-validate
         - id: erb-validate
         - id: puppet-lint

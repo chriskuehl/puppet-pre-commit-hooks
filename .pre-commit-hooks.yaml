@@ -1,3 +1,11 @@
+- id: bolt-validate
+  additional_dependencies: ['puppet']
+  description: Validate syntax of Bolt plans
+  entry: bolt-validate
+  files: plans/\w+\.pp$
+  language: ruby
+  name: Validate Bolt plans
+
 - id: epp-validate
   additional_dependencies: ['puppet']
   description: Validate syntax of Puppet EPP templates
@@ -33,6 +41,7 @@
   description: Validate syntax of Puppet manifests
   entry: puppet-validate
   files: \.pp$
+  exclude: plans/
   language: ruby
   name: Validate Puppet manifests
 
