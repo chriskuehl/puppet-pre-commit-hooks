@@ -24,7 +24,7 @@
 - id: g10k-validate
   description: Validate syntax of Puppetfile using g10k
   entry: g10k-validate
-  files: ^Puppetfile$
+  files: Puppetfile$
   language: ruby
   name: Validate g10k Puppetfile
 
@@ -49,7 +49,7 @@
   additional_dependencies: ['r10k']
   description: Validate syntax of Puppetfile using r10k
   entry: r10k-validate
-  files: ^Puppetfile$
+  files: Puppetfile$
   language: ruby
   name: Validate r10k Puppetfile
 
