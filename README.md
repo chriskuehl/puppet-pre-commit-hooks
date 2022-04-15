@@ -41,7 +41,7 @@ Provides the following hooks:
 
     ```yaml
     - repo: https://github.com/chriskuehl/puppet-pre-commit-hooks.git
-      sha: v2.1.0
+      rev: v2.1.0
       hooks:
         - id: epp-validate
         - id: erb-validate
