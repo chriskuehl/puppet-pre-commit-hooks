@@ -20,6 +20,8 @@ Provides the following hooks:
 * **puppet-validate:** uses [`puppet parser validate`][puppet-parser] to check the syntax of
   Puppet manifests.
 
+* **puppet-strings:** uses [`puppet strings generate`][puppet-strings] to check the puppet documentation
+
 * **r10k-validate:** uses [r10k][r10k] to validate [Puppetfile][puppetfile] syntax.
 
 * **ruby-validate:** uses [`ruby -c`][ruby-c] to validate the syntax of ruby code.
@@ -30,6 +32,7 @@ Provides the following hooks:
 [g10k]: https://github.com/xorpaul/g10k
 [puppetfile]: https://puppet.com/docs/pe/latest/puppetfile.html
 [puppet-parser]: https://puppet.com/docs/puppet/latest/man/parser.html#EXAMPLES
+[puppet-strings]: https://puppet.com/docs/puppet/7/puppet_strings.html
 [r10k]: https://github.com/puppetlabs/r10k
 [rubocop]: https://github.com/rubocop-hq/rubocop
 [ruby-c]: https://ruby-doc.org/docs/ruby-doc-bundle/Manual/man-1.4/options.html
@@ -92,6 +95,9 @@ Provides the following hooks:
 
 Any other arguments to `puppet-validate` will be fed directly to
 `puppet parser validate`, as long as they are in the format `--arg=value`.
+
+Any other arguments to `puppet-strings` will be fed directly to
+`puppet strings generate`.
 
 By default, the latest versions of `puppet` and `puppet-lint` are used. If
 you'd like to use a different version, you can pass `additional_dependencies`

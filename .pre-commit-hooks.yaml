@@ -45,6 +45,14 @@
   language: ruby
   name: Validate Puppet manifests
 
+- id: puppet-strings
+  additional_dependencies: ['puppet-strings']
+  description: Validate puppet documentation is up to date
+  entry: puppet-strings
+  files: \.pp$
+  language: ruby
+  name: Validate puppet documentation
+
 - id: r10k-validate
   additional_dependencies: ['r10k']
   description: Validate syntax of Puppetfile using r10k

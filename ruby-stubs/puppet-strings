@@ -1,0 +1,21 @@
+require 'English'
+
+status = 0
+options = []
+ARGV.each do |arg|
+  # The following command will execute puppet strings to generate documentation
+  # As puppet strings does not return a non-zero rc when file changes
+  # We need to manually check it with a git command.
+  # The second part of the command will output the number of modified files
+  # outside the git stage zone for the doc folder (output folder of the 
+  # puppet strings command).
+  output = `puppet strings generate -- "#{arg}" 2>&1 && exit $(git status --porcelain doc | grep -v '^A' | wc -l)`
+  next if $CHILD_STATUS.exitstatus == 0
+  puts "#{arg}: failed Puppet validation"
+  puts output
+  status = 1
+end
+
+exit status
+
+# vim: ft=ruby
